@@ -8060,7 +8060,7 @@ a {
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #343957;
+  background-color: #355734;
   transition: all .2s ease;
   z-index: 4; }
   .nav-header .logo-abbr {
@@ -8488,7 +8488,7 @@ svg.pulse-svg {
     padding: 15px 0;
     min-width: 12.5rem; }
     .header-right .header-profile .dropdown-menu a:hover, .header-right .header-profile .dropdown-menu a:focus, .header-right .header-profile .dropdown-menu a.active {
-      color: #593bdb;
+      color: #3bdb48;
       background: transparent; }
   .header-right .header-profile img {
     width: 30px;
@@ -8500,7 +8500,7 @@ svg.pulse-svg {
     .header-right .header-profile .dropdown-toggle span {
       display: none; } }
   .header-right .header-profile .profile_title {
-    background: #593bdb;
+    background: #3bdb48;
     color: #fff;
     padding: 10px 20px; }
     .header-right .header-profile .profile_title h5 {
@@ -10315,7 +10315,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   top: 5rem;
   padding-top: 0;
   z-index: 2;
-  background-color: #343957;
+  background-color: #355734;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transition: all .2s ease; }
   .quixnav .quixnav-scroll {
@@ -10348,14 +10348,14 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
         position: relative;
         top: -2px; }
       .quixnav .metismenu > li > a {
-        color: #bdbdc7; }
+        color: #ededf2; }
       .quixnav .metismenu > li:hover > a, .quixnav .metismenu > li:focus > a, .quixnav .metismenu > li.mm-active > a {
-        background-color: #6b51df;
+        background-color: #53df51;
         color: #fff; }
       .quixnav .metismenu > li.mm-active ul {
-        background-color: rgba(88, 115, 254, 0.04); }
+        background-color: #278726; }
         .quixnav .metismenu > li.mm-active ul ul {
-          background-color: rgba(88, 115, 254, 0.04); }
+          background-color: #278726; }
     .quixnav .metismenu li {
       position: relative; }
     .quixnav .metismenu ul {
@@ -11211,7 +11211,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sidebar-style="overlay"] .nav-header .hamburger.is-active {
     left: 0; }
     [data-sidebar-style="overlay"] .nav-header .hamburger.is-active .line {
-      background-color: #593bdb; }
+      background-color: #3bdb56; }
 
 [data-sidebar-style="overlay"] .menu-toggle .nav-header {
   position: absolute;
@@ -11469,7 +11469,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       color: #fff; }
 
 [data-nav-headerbg="color_4"] .nav-header {
-  background-color: #4527a0; }
+  background-color: #27a02f; }
   [data-nav-headerbg="color_4"] .nav-header .brand-logo {
     color: #fff; }
     [data-nav-headerbg="color_4"] .nav-header .brand-logo:hover {
@@ -11483,7 +11483,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       color: #fff; }
 
 [data-nav-headerbg="color_6"] .nav-header {
-  background-color: #283593; }
+  background-color: #28932d; }
   [data-nav-headerbg="color_6"] .nav-header .brand-logo {
     color: #fff; }
     [data-nav-headerbg="color_6"] .nav-header .brand-logo:hover {

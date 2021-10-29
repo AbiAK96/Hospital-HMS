@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Manage Transfer</title>
+<title>Manage Medicine</title>
 <link rel="icon" type="image/png" sizes="16x16"
 	href="./images/favicon.png">
 <link rel="stylesheet"
@@ -174,46 +174,57 @@
 
 				<div class="card">
 					<div class="card-header">
-						<h4 class="card-title">Manage Transfer Details</h4>
+						<h4 class="card-title">Manage medicine</h4>
 						<div class="form-group col-md-6">
 							<label>Search by ID</label>
-							<form action="Transfer">
-								<input name="transferId" type="text" class="form-control"
-									placeholder="Transfer ID" required> <br>
+							<form action="Medicine">
+								<input name="medicineId" type="text" class="form-control"
+									placeholder="medicine ID" required> <br>
 								<button type="submit" class="btn btn-success">Search
-									Transfer</button>
+									medicine</button>
 							</form>
 						</div>
 					</div>
 					<div class="card-body">
 						<div class="basic-form">
-							<form action="Transfer?action=update" method="post">
+							<form action="Medicine?action=update" method="post">
 
 								<div class="form-row">
 									<div class="form-group col-md-6">
-										<label>Transfer ID</label> <input type="text"
-											class="form-control" name="transferId"
-											value="${transfer.transferId}" required />
+										<label>Medicine ID</label> <input type="text"
+											class="form-control" name="medicineId"
+											value="${medicine.medicineId}" required />
 									</div>
 									<div class="form-group col-md-6">
-										<label>Patient Name</label> <input type="text"
-											class="form-control" name="patientName"
-											value="${transfer.patientName}" required />
+										<label>Medicine Name</label> <input type="text"
+											class="form-control" name="medicineName"
+											value="${medicine.medicineName}" required />
 									</div>
 									<div class="form-group col-md-6">
-										<label>Branch ID</label> <input type="text"
-											class="form-control" name="branchId"
-											value="${transfer.branchId}" required />
+										<label>Medicine Description</label> <input type="text"
+											class="form-control" name="medicineDescription"
+											value="${medicine.medicineDescription}" required />
 									</div>
 									<div class="form-group col-md-6">
-										<label>Transfer-Date</label> <input name="transferDate"
-											class="datepicker-default form-control"
-											value="${transfer.transferDate}" id="transferDate" required>
+										<label>Manufacturing - Date</label> <input
+											name="manufacturingDate"
+											class="datepicker-default form-control" value="Select date"
+											id="date" required>
+									</div>
+									<div class="form-group col-md-6">
+										<label>Expiry - Date</label> <input name="expiryDate"
+											class="datepicker-default form-control" value="Select date"
+											id="date" required>
+									</div>
+									<div class="form-group col-md-6">
+										<label>Quantity</label> <input type="text"
+											class="form-control" name="qty" value="${medicine.qty}"
+											required />
 									</div>
 								</div>
 
 								<button type="submit" class="btn btn-success">Update
-									transfer</button>
+									medicine</button>
 							</form>
 						</div>
 					</div>
@@ -255,6 +266,7 @@
 	<script src="./vendor/global/global.min.js"></script>
 	<script src="./js/quixnav-init.js"></script>
 	<script src="./js/custom.min.js"></script>
+
 	<!-- momment js is must -->
 	<script src="./vendor/moment/moment.min.js"></script>
 	<!-- clockpicker -->
@@ -269,9 +281,6 @@
 
 	<!-- Clockpicker init -->
 	<script src="./js/plugins-init/clock-picker-init.js"></script>
-
-
-	<script src="./js/plugins-init/pickadate-init.js"></script>
 
 </body>
 </html>

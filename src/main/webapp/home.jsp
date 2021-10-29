@@ -42,12 +42,22 @@
                 <nav class="navbar navbar-expand">
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
-                            <div class="search_bar dropdown">
-                                <span class="search_icon p-3 c-pointer" data-toggle="dropdown">
-                                    <i class="mdi mdi-magnify"></i>
-                                    </span>
-                            </div>
+                            
                         </div>
+
+                        <ul class="navbar-nav header-right">
+                            <li class="nav-item dropdown header-profile" style="color: gray;">
+                                <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                                    <i class="mdi mdi-account"></i>Admin
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="home.jsp" class="dropdown-item">
+                                        <i class="icon-key"></i>
+                                        <span class="ml-2">Logout </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </nav>
             </div>
@@ -82,33 +92,33 @@
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Employee</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./employee-add.jsp">Add</a></li>
-                            <li><a href="./employee-all.jsp">View</a></li>
+                            <li><a href="Employee?action=add">Add</a></li>
+                            <li><a href="Employee?action=all">View</a></li>
                             <li><a href="./employee-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Patient</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./patient-add.jsp">Add</a></li>
-                            <li><a href="./patient-all.jsp">View</a></li>
+                            <li><a href="Patient?action=add">Add</a></li>
+                            <li><a href="Patient?action=all">View</a></li>
                             <li><a href="./patient-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Appointment</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./appointment-add.jsp">Add</a></li>
-                            <li><a href="./appointment-all.jsp">View</a></li>
+                            <li><a href="Appointment?action=add">Add</a></li>
+                            <li><a href="Appointment?action=all">View</a></li>
                             <li><a href="./appointment-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Discharge</span></a>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Transfer</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./discharge-add.jsp">Add</a></li>
-                            <li><a href="./discharge-all.jsp">View</a></li>
-                            <li><a href="./discharge-manage.jsp">Manage</a></li>
+                            <li><a href="Transfer?action=add">Add</a></li>
+                            <li><a href="Transfer?action=all">View</a></li>
+                            <li><a href="./transfer-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
@@ -134,10 +144,15 @@
                             <li><a href="./ward-manage.jsp">Manage</a></li>
                         </ul>
                     </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Medicine</span></a>
+                        <ul aria-expanded="false">
+                           <li><a href="./medicine-add.jsp">Add</a></li>
+                            <li><a href="Medicine?action=all">View</a></li>
+                            <li><a href="./medicine-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
-
-
         </div>
         <!--**********************************
             Sidebar end
@@ -147,7 +162,94 @@
             Content body start
         ***********************************-->
         <div class="content-body">
-            <!-- row -->
+            <div class="row page-titles mx-0">
+                    <div class="col-sm-6 p-md-0">
+                        <div class="welcome-text">
+                            <h4>WELCOME TO HOSPITAL MANAGMENT SYSTEM !</h4>
+                            <p class="mb-0">WE CARE HOSPITAL</p>
+                        </div>
+                    </div>
+                </div>
+            <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="stat-widget-one card-body">
+                                <div class="stat-icon d-inline-block">
+                                    <i class="ti-money text-success border-success"></i>
+                                </div>
+                                <div class="stat-content d-inline-block">
+                                    <div class="stat-text">Doctors</div>
+                                    <div class="stat-digit">1,012</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="stat-widget-one card-body">
+                                <div class="stat-icon d-inline-block">
+                                    <i class="ti-user text-primary border-primary"></i>
+                                </div>
+                                <div class="stat-content d-inline-block">
+                                    <div class="stat-text">Ambulance</div>
+                                    <div class="stat-digit">125</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="stat-widget-one card-body">
+                                <div class="stat-icon d-inline-block">
+                                    <i class="ti-layout-grid2 text-pink border-pink"></i>
+                                </div>
+                                <div class="stat-content d-inline-block">
+                                    <div class="stat-text">Current Patients</div>
+                                    <div class="stat-digit">770</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="stat-widget-one card-body">
+                                <div class="stat-icon d-inline-block">
+                                    <i class="ti-link text-danger border-danger"></i>
+                                </div>
+                                <div class="stat-content d-inline-block">
+                                    <div class="stat-text">Branches</div>
+                                    <div class="stat-digit">5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="stat-widget-one card-body">
+                                <div class="stat-icon d-inline-block">
+                                    <i class="ti-link text-danger border-danger"></i>
+                                </div>
+                                <div class="stat-content d-inline-block">
+                                    <div class="stat-text">Wards</div>
+                                    <div class="stat-digit">130</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="stat-widget-one card-body">
+                                <div class="stat-icon d-inline-block">
+                                    <i class="ti-link text-danger border-danger"></i>
+                                </div>
+                                <div class="stat-content d-inline-block">
+                                    <div class="stat-text">Appointment</div>
+                                    <div class="stat-digit">630</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             <div class="col-lg-6">
                         <div class="card">
                             <div class="card-header d-block">
@@ -159,36 +261,43 @@
                                     <div class="accordion__item">
                                         <div class="accordion__header" data-toggle="collapse" data-target="#default_collapseOne">
                                             <span class="accordion__header--text">Kandy</span>
-                                            <span class="accordion__header--text">Kandy</span>
-                                            <span class="accordion__header--text">Kandy</span>
-                                            <span class="accordion__header--text">Kandy</span>
-                                            <span class="accordion__header--indicator"></span>
+                                            
                                         </div>
                                         <div id="default_collapseOne" class="collapse accordion__body show" data-parent="#accordion-one">
                                             <div class="accordion__body--text">
-                                                AAAAA
+                                                WE CARE Kandy</br>
+                                                No. 907 Peradeniya Rd, Kandy 20000</br>
+                                                wecarekandy@gmail.com</br>
+                                                0812364871
+                                                
                                             </div>
                                         </div>
                                     </div>
                                     <div class="accordion__item">
                                         <div class="accordion__header collapsed" data-toggle="collapse" data-target="#default_collapseTwo">
                                             <span class="accordion__header--text">Colombo</span>
-                                            <span class="accordion__header--indicator"></span>
+                                            
                                         </div>
                                         <div id="default_collapseTwo" class="collapse accordion__body" data-parent="#accordion-one">
                                             <div class="accordion__body--text">
-                                                BBBBB
+                                                WE Care Colombo</br>
+                                                No.114, Norris Canal Road, Colombo 01</br>
+                                                wecarecolombo@gmail.com</br>
+                                                0116497631
                                             </div>
                                         </div>
                                     </div>
                                     <div class="accordion__item">
                                         <div class="accordion__header collapsed" data-toggle="collapse" data-target="#default_collapseThree">
                                             <span class="accordion__header--text">Chilaw</span>
-                                            <span class="accordion__header--indicator"></span>
+                                            
                                         </div>
                                         <div id="default_collapseThree" class="collapse accordion__body" data-parent="#accordion-one">
                                             <div class="accordion__body--text">
-                                                CCCCC
+                                                WE CARE Galle</br>
+                                                No. 10, Wakwalla Road, Galle 4100</br>
+                                                wecaregalle@gmail.com</br>
+                                                0452554727
                                             </div>
                                         </div>
                                     </div>
@@ -204,11 +313,36 @@
             </div>
         </div>
     </div>
-     <!-- Required vendors -->
+  <!-- Required vendors -->
     <script src="./vendor/global/global.min.js"></script>
     <script src="./js/quixnav-init.js"></script>
     <script src="./js/custom.min.js"></script>
 
+
+    <!-- Vectormap -->
+    <script src="./vendor/raphael/raphael.min.js"></script>
+    <script src="./vendor/morris/morris.min.js"></script>
+
+
+    <script src="./vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="./vendor/chart.js/Chart.bundle.min.js"></script>
+
+    <script src="./vendor/gaugeJS/dist/gauge.min.js"></script>
+
+    <!--  flot-chart js -->
+    <script src="./vendor/flot/jquery.flot.js"></script>
+    <script src="./vendor/flot/jquery.flot.resize.js"></script>
+
+    <!-- Owl Carousel -->
+    <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!-- Counter Up -->
+    <script src="./vendor/jqvmap/js/jquery.vmap.min.js"></script>
+    <script src="./vendor/jqvmap/js/jquery.vmap.usa.js"></script>
+    <script src="./vendor/jquery.counterup/jquery.counterup.min.js"></script>
+
+
+    <script src="./js/dashboard/dashboard-1.js"></script>
 
     
 </body>

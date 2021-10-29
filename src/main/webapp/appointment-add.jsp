@@ -55,7 +55,7 @@
 							<div class="search_bar dropdown">
 								<span class="search_icon p-3 c-pointer" data-toggle="dropdown">
 									<i class="mdi mdi-magnify"></i> ${message}
-								</span> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+								</span>
 							</div>
 						</div>
 					</div>
@@ -70,101 +70,90 @@
             Sidebar start
         ***********************************-->
 		<div class="quixnav">
-			<div class="quixnav-scroll">
-				<ul class="metismenu" id="menu">
-					<li class="nav-label">Menu</li>
-					<li><a class="has-arrow" href="javascript:void()"
-						aria-expanded="false"><i class="icon icon-app-store"></i><span
-							class="nav-text">Branch</span></a>
-						<ul aria-expanded="false">
-							<li><a href="./branch-add.jsp">Add</a></li>
-							<li><a href="Branch?action=all">View</a></li>
-							<li><a href="./branch-manage.jsp">Manage</a></li>
+            <div class="quixnav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">Menu</li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                                class="icon icon-app-store"></i><span class="nav-text">Branch</span></a>
+                        <ul aria-expanded="false">
+                            <li><a href="./branch-add.jsp">Add</a></li>
+                            <li><a href="Branch?action=all">View</a></li>
+                            <li><a href="./branch-manage.jsp">Manage</a></li>
 
-						</ul></li>
-					<li><a class="has-arrow" href="javascript:void()"
-						aria-expanded="false"><i class="icon icon-app-store"></i><span
-							class="nav-text">Doctor</span></a>
-						<ul aria-expanded="false">
-							<li><a href="DoctorDetail?action=add">Add</a></li>
-							<li><a href="DoctorDetail?action=all">View</a></li>
-							<li><a href="./doctor-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Doctor</span></a>
+                        <ul aria-expanded="false">
+                            <li><a href="DoctorDetail?action=add">Add</a></li>
+                            <li><a href="DoctorDetail?action=all">View</a></li>
+                            <li><a href="./doctor-manage.jsp">Manage</a></li>
 
-						</ul></li>
-					<li><a class="has-arrow" href="javascript:void()"
-						aria-expanded="false"><i class="icon icon-app-store"></i><span
-							class="nav-text">Employee</span></a>
-						<ul aria-expanded="false">
-							<li><a href="./employee-add.jsp">Add</a></li>
-							<li><a href="./employee-all.jsp">View</a></li>
-							<li><a href="./employee-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Employee</span></a>
+                        <ul aria-expanded="false">
+                            <li><a href="Employee?action=add">Add</a></li>
+                            <li><a href="Employee?action=all">View</a></li>
+                            <li><a href="./employee-manage.jsp">Manage</a></li>
 
-						</ul></li>
-					<li><a class="has-arrow" href="javascript:void()"
-						aria-expanded="false"><i class="icon icon-app-store"></i><span
-							class="nav-text">Patient</span></a>
-						<ul aria-expanded="false">
-							<li><a href="./patient-add.jsp">Add</a></li>
-							<li><a href="./patient-all.jsp">View</a></li>
-							<li><a href="./patient-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Patient</span></a>
+                        <ul aria-expanded="false">
+                            <li><a href="Patient?action=add">Add</a></li>
+                            <li><a href="Patient?action=all">View</a></li>
+                            <li><a href="./patient-manage.jsp">Manage</a></li>
 
-						</ul></li>
-					<li><a class="has-arrow" href="javascript:void()"
-						aria-expanded="false"><i class="icon icon-app-store"></i><span
-							class="nav-text">Appointment</span></a>
-						<ul aria-expanded="false">
-							<li><a href="./appointment-add.jsp">Add</a></li>
-							<li><a href="./appointment-all.jsp">View</a></li>
-							<li><a href="./appointment-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Appointment</span></a>
+                        <ul aria-expanded="false">
+                            <li><a href="Appointment?action=add">Add</a></li>
+                            <li><a href="Appointment?action=all">View</a></li>
+                            <li><a href="./appointment-manage.jsp">Manage</a></li>
 
-						</ul></li>
-					<li><a class="has-arrow" href="javascript:void()"
-						aria-expanded="false"><i class="icon icon-app-store"></i><span
-							class="nav-text">Discharge</span></a>
-						<ul aria-expanded="false">
-							<li><a href="./discharge-add.jsp">Add</a></li>
-							<li><a href="./discharge-all.jsp">View</a></li>
-							<li><a href="./discharge-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Transfer</span></a>
+                        <ul aria-expanded="false">
+                            <li><a href="Transfer?action=add">Add</a></li>
+                            <li><a href="Transfer?action=all">View</a></li>
+                            <li><a href="./transfer-manage.jsp">Manage</a></li>
 
-						</ul></li>
-					<li><a class="has-arrow" href="javascript:void()"
-						aria-expanded="false"><i class="icon icon-app-store"></i><span
-							class="nav-text">Role</span></a>
-						<ul aria-expanded="false">
-							<li><a href="./role-add.jsp">Add</a></li>
-							<li><a href="getAllRole?action=all">View</a></li>
-							<li><a href="./role-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Role</span></a>
+                        <ul aria-expanded="false">
+                           <li><a href="./role-add.jsp">Add</a></li>
+                            <li><a href="getAllRole?action=all">View</a></li>
+                            <li><a href="./role-manage.jsp">Manage</a></li>
 
-						</ul></li>
-					<li><a class="has-arrow" href="javascript:void()"
-						aria-expanded="false"><i class="icon icon-app-store"></i><span
-							class="nav-text">User</span></a>
-						<ul aria-expanded="false">
-							<li><a href="User?action=add">Add</a></li>
-							<li><a href="User?action=all">View</a></li>
-							<li><a href="./user-manage.jsp">Manage</a></li>
-						</ul></li>
-					<li><a class="has-arrow" href="javascript:void()"
-						aria-expanded="false"><i class="icon icon-app-store"></i><span
-							class="nav-text">User</span></a>
-						<ul aria-expanded="false">
-							<li><a href="User?action=add">Add</a></li>
-							<li><a href="User?action=all">View</a></li>
-							<li><a href="./user-manage.jsp">Manage</a></li>
-						</ul></li>
-					<li><a class="has-arrow" href="javascript:void()"
-						aria-expanded="false"><i class="icon icon-app-store"></i><span
-							class="nav-text">Ward</span></a>
-						<ul aria-expanded="false">
-							<li><a href="Ward?action=add">Add</a></li>
-							<li><a href="Ward?action=all">View</a></li>
-							<li><a href="./ward-manage.jsp">Manage</a></li>
-						</ul></li>
-				</ul>
-			</div>
-
-
-		</div>
+                        </ul>
+                    </li>
+                       <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">User</span></a>
+                        <ul aria-expanded="false">
+                           <li><a href="User?action=add">Add</a></li>
+                            <li><a href="User?action=all">View</a></li>
+                            <li><a href="./user-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Ward</span></a>
+                        <ul aria-expanded="false">
+                           <li><a href="Ward?action=add">Add</a></li>
+                            <li><a href="Ward?action=all">View</a></li>
+                            <li><a href="./ward-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Medicine</span></a>
+                        <ul aria-expanded="false">
+                           <li><a href="./medicine-add.jsp">Add</a></li>
+                            <li><a href="Medicine?action=all">View</a></li>
+                            <li><a href="./medicine-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
 		<!--**********************************
             Sidebar end
         ***********************************-->
@@ -196,7 +185,7 @@
 									</div>
 									<div class="form-group col-md-6">
 										<label>Doctor</label> <br> <select id="doctor"
-											name="doctor" class="btn btn-info dropdown-toggle" required>
+											name="doctor" class="btn btn-success dropdown-toggle" required>
 											<tag:forEach items="${doctorDetailList}" var="doctorDetail">
 												<option value="${doctorDetail.doctorId}">${doctorDetail.doctorId}</option>
 											</tag:forEach>
@@ -204,12 +193,12 @@
 									</div>
 
 									<div class="form-group col-md-6">
-										<label>Pick-Date</label> <input name="date"
+										<label>Appointment - Date</label> <input name="date"
 											class="datepicker-default form-control" value="Select date"
 											id="date" required>
 									</div>
 									<div class="col-md-6 col-xl-3 col-xxl-6">
-										<label>Pick-Time</label>
+										<label>Appointment - Time</label>
 										<div class="input-group clockpicker" data-placement="bottom"
 											data-align="top" data-autoclose="true">
 											<input type="text" name="time" class="form-control"
@@ -220,7 +209,7 @@
 									</div>
 								</div>
 								<br>
-								<button type="submit" class="btn btn-primary">Add
+								<button type="submit" class="btn btn-success">Add
 									Appointment</button>
 							</form>
 						</div>

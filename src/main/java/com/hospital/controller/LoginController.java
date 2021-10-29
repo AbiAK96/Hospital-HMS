@@ -43,7 +43,7 @@ public class LoginController extends HttpServlet {
             } else {
                 HttpSession session = request.getSession();
                 session.setAttribute("user", username);
-                response.sendRedirect("login.jsp");
+                response.sendRedirect("login-failed.jsp");
                 
                 
             }

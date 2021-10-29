@@ -85,33 +85,33 @@
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Employee</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./employee-add.jsp">Add</a></li>
-                            <li><a href="./employee-all.jsp">View</a></li>
+                            <li><a href="Employee?action=add">Add</a></li>
+                            <li><a href="Employee?action=all">View</a></li>
                             <li><a href="./employee-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Patient</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./patient-add.jsp">Add</a></li>
-                            <li><a href="./patient-all.jsp">View</a></li>
+                            <li><a href="Patient?action=add">Add</a></li>
+                            <li><a href="Patient?action=all">View</a></li>
                             <li><a href="./patient-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Appointment</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./appointment-add.jsp">Add</a></li>
-                            <li><a href="./appointment-all.jsp">View</a></li>
+                            <li><a href="Appointment?action=add">Add</a></li>
+                            <li><a href="Appointment?action=all">View</a></li>
                             <li><a href="./appointment-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Discharge</span></a>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Transfer</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./discharge-add.jsp">Add</a></li>
-                            <li><a href="./discharge-all.jsp">View</a></li>
-                            <li><a href="./discharge-manage.jsp">Manage</a></li>
+                            <li><a href="Transfer?action=add">Add</a></li>
+                            <li><a href="Transfer?action=all">View</a></li>
+                            <li><a href="./transfer-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
@@ -130,13 +130,6 @@
                             <li><a href="./user-manage.jsp">Manage</a></li>
                         </ul>
                     </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">User</span></a>
-                        <ul aria-expanded="false">
-                           <li><a href="User?action=add">Add</a></li>
-                            <li><a href="User?action=all">View</a></li>
-                            <li><a href="./user-manage.jsp">Manage</a></li>
-                        </ul>
-                    </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Ward</span></a>
                         <ul aria-expanded="false">
                            <li><a href="Ward?action=add">Add</a></li>
@@ -144,10 +137,15 @@
                             <li><a href="./ward-manage.jsp">Manage</a></li>
                         </ul>
                     </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Medicine</span></a>
+                        <ul aria-expanded="false">
+                           <li><a href="./medicine-add.jsp">Add</a></li>
+                            <li><a href="Medicine?action=all">View</a></li>
+                            <li><a href="./medicine-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
-
-
         </div>
         <!--**********************************
             Sidebar end
@@ -166,9 +164,9 @@
                                 <div class="form-group col-md-6">
                                  <label>Search by ID</label>
                                  <form action="Appointment">
-                                 <input name="appointmentId" type="text" class="form-control" placeholder="Appointment ID" >
+                                 <input name="appointmentId" type="text" class="form-control" placeholder="Appointment ID" required >
                                  <br>
-                                 <button type="submit" class="btn btn-primary">Search appointment</button>
+                                 <button type="submit" class="btn btn-success">Search appointment</button>
                                  </form>
                                 </div>
                             </div>
@@ -179,31 +177,31 @@
                                         <div class="form-row">
                                         	 <div class="form-group col-md-6">
                                                 <label>Appointment ID</label>
-                                                <input type="text" class="form-control" name="appointmentId" value ="${appointment.appointmentId}"/>
+                                                <input type="text" class="form-control" name="appointmentId" value ="${appointment.appointmentId}" required/>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label>Patient Name</label>
-                                                <input type="text" class="form-control" name="patientName" value ="${appointment.patientName}"/>
+                                                <input type="text" class="form-control" name="patientName" value ="${appointment.patientName}" required/>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label>Contact</label>
-                                                <input type="text" class="form-control" name="contact" value ="${appointment.contact}"/>
+                                                <input type="text" class="form-control" name="contact" value ="${appointment.contact}" required/>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label>Doctor</label>
-                                                <input type="text" class="form-control" name="doctor" value ="${appointment.doctor}"/>
+                                                <input type="text" class="form-control" name="doctor" value ="${appointment.doctor}" required/>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label>Date</label>
-                                                <input type="text" class="form-control" name="date" value ="${appointment.date}"/>
+                                                <input type="text" class="form-control" name="date" value ="${appointment.date}" required/>
                                             </div>
                                                 <div class="form-group col-md-6">
                                                 <label>Time</label>
-                                                <input type="text" class="form-control" name="time" value ="${appointment.time}"/>
+                                                <input type="text" class="form-control" name="time" value ="${appointment.time}" required/>
                                             </div>
                                         </div>
 
-                                        <button type="submit" class="btn btn-primary">Update appointment</button>
+                                        <button type="submit" class="btn btn-success">Update appointment</button>
                                     </form>
                                 </div>
                             </div>

@@ -93,25 +93,26 @@
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Patient</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./patient-add.jsp">Add</a></li>
-                            <li><a href="./patient-all.jsp">View</a></li>
+                            <li><a href="Patient?action=add">Add</a></li>
+                            <li><a href="Patient?action=all">View</a></li>
                             <li><a href="./patient-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Appointment</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./appointment-add.jsp">Add</a></li>
-                            <li><a href="./appointment-all.jsp">View</a></li>
+                            <li><a href="Appointment?action=add">Add</a></li>
+                            <li><a href="Appointment?action=all">View</a></li>
                             <li><a href="./appointment-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Discharge</span></a>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Transfer</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./discharge-add.jsp">Add</a></li>
-                            <li><a href="./discharge-all.jsp">View</a></li>
-                            <li><a href="./discharge-manage.jsp">Manage</a></li>
+                            <li><a href="Transfer?action=add">Add</a></li>
+                            <li><a href="Transfer?action=all">View</a></li>
+                            <li><a href="./transfer-manage.jsp">Manage</a></li>
+
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Role</span></a>
@@ -119,6 +120,7 @@
                            <li><a href="./role-add.jsp">Add</a></li>
                             <li><a href="getAllRole?action=all">View</a></li>
                             <li><a href="./role-manage.jsp">Manage</a></li>
+
                         </ul>
                     </li>
                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">User</span></a>
@@ -135,10 +137,15 @@
                             <li><a href="./ward-manage.jsp">Manage</a></li>
                         </ul>
                     </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Medicine</span></a>
+                        <ul aria-expanded="false">
+                           <li><a href="./medicine-add.jsp">Add</a></li>
+                            <li><a href="Medicine?action=all">View</a></li>
+                            <li><a href="./medicine-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
-
-
         </div>
         <!--**********************************
             Sidebar end
@@ -157,9 +164,9 @@
                                 <div class="form-group col-md-6">
                                 <form action="getUser">
 										<label for="userId">Enter User Id:</label>
-										<input id="userId" type="number" name="userId" class="form-control"/>
+										<input id="userId" type="number" name="userId" class="form-control" required/>
 										<br/>
-										<button type="submit" class="btn btn-info">Search</button>
+										<button type="submit" class="btn btn-success">Search</button>
                                  </form>
                                 </div>
                             </div>
@@ -167,19 +174,19 @@
                                 <div class="basic-form">
 						         <form action="updateUser?action=update" method="post">
 									<label for="userId">User ID:</label>
-									<input id="userId" type="number" name="userId" readonly="readonly" class="form-control" value ="${user.userId}"/>
+									<input id="userId" type="number" name="userId" readonly="readonly" class="form-control" value ="${user.userId}" required/>
 									
 									<label for="userName">User Name:</label>
-									<input id="userName" type="text" name="userName" class="form-control" value ="${user.userName}"/>
+									<input id="userName" type="text" name="userName" class="form-control" value ="${user.userName}" required/>
 									
 									<label for="passWord">Password :</label>
-									<input id="passWord" type="password" name="passWord" class="form-control" value ="${user.passWord}"/>
+									<input id="passWord" type="text" name="passWord" class="form-control" value ="${user.passWord}" required/>
 									
 									<label for="employeeId">Employee ID:</label>
-									<input id="employeeId" type="number" name="employeeId" class="form-control" value ="${user.employeeId}"/>
+									<input id="employeeId" type="number" name="employeeId" class="form-control" value ="${user.employeeId}" required/>
 									<br/>
 									
-									<button type="submit" class="btn btn-warning">Update</button>
+									<button type="submit" class="btn btn-success">Update</button>
 								</form>	
                                 </div>
                             </div>

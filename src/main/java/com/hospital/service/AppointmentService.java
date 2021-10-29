@@ -4,12 +4,14 @@ import java.sql.SQLException;
 import java.util.List;
 
 import com.hospital.dao.AppointmentDAO;
+import com.hospital.dao.SmsClient;
 import com.hospital.model.Appointment;
 
 
 public class AppointmentService {
 	
 	public boolean addAppointment(Appointment appointment) throws ClassNotFoundException, SQLException {
+		SmsClient.getInstance().SendSms(appointment.getContact(), "Your appointment with ABC Hospital is confimed!");
 		return AppointmentDAO.addAppointment(appointment);
 	}
 	

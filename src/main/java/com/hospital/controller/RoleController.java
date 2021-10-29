@@ -20,58 +20,36 @@ import com.hospital.service.RoleService;
  */
 public class RoleController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		String action = request.getParameter("action");
-		
 		if(action != null && action.equals("all")) {
 			getAllRole(request, response);
 		}else {
 			searchTheRole(request, response);
-		}
-		
-		
-	}
-
+		}}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		String action = request.getParameter("action");
-		
 		if(action.equals("delete")) {
 			deleteRole(request, response);
-		}
-		else if(action.equals("add")) {
+		}else if(action.equals("add")) {
 			addRole(request, response);
-		}
-		else if(action.equals("update")) {
+		}else if(action.equals("update")) {
 			updateRole(request, response);
-		}
-		
-	}
-	
+		}}
 	private void getAllRole(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
-		
 			RoleService roleservice = new RoleService();
 			List<Role> roleList = new ArrayList<Role>();
-			
 			String message = "";
-			
 			try {
-				
 				roleList = roleservice.getAllRole();
 				if(roleList.isEmpty()) {
 					message = "Sorry at the moment we don't have Role";
 				}
-				
 			} catch (Exception e) {
-
 				message = e.getMessage();
 			}
-			
 			request.setAttribute("roleList", roleList);
 			request.setAttribute("message", message);
-			
 			RequestDispatcher rd = request.getRequestDispatcher("role-all.jsp");
 			rd.forward(request, response);
 		}

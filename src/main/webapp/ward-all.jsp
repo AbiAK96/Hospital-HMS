@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>All Branch</title>
+<title>All ward</title>
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
     <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.min.css">
@@ -103,32 +103,41 @@
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Patient</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./patient-add.jsp">Add</a></li>
-                            <li><a href="./patient-all.jsp">View</a></li>
+                            <li><a href="Patient?action=add">Add</a></li>
+                            <li><a href="Patient?action=all">View</a></li>
                             <li><a href="./patient-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Appointment</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./appointment-add.jsp">Add</a></li>
-                            <li><a href="./appointment-all.jsp">View</a></li>
+                            <li><a href="Appointment?action=add">Add</a></li>
+                            <li><a href="Appointment?action=all">View</a></li>
                             <li><a href="./appointment-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Discharge</span></a>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Transfer</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./discharge-add.jsp">Add</a></li>
-                            <li><a href="./discharge-all.jsp">View</a></li>
-                            <li><a href="./discharge-manage.jsp">Manage</a></li>
+                            <li><a href="Transfer?action=add">Add</a></li>
+                            <li><a href="Transfer?action=all">View</a></li>
+                            <li><a href="./transfer-manage.jsp">Manage</a></li>
+
                         </ul>
                     </li>
-                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Role</span></a>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Role</span></a>
                         <ul aria-expanded="false">
                            <li><a href="./role-add.jsp">Add</a></li>
                             <li><a href="getAllRole?action=all">View</a></li>
                             <li><a href="./role-manage.jsp">Manage</a></li>
+
+                        </ul>
+                    </li>
+                       <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">User</span></a>
+                        <ul aria-expanded="false">
+                           <li><a href="User?action=add">Add</a></li>
+                            <li><a href="User?action=all">View</a></li>
+                            <li><a href="./user-manage.jsp">Manage</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Ward</span></a>
@@ -138,10 +147,15 @@
                             <li><a href="./ward-manage.jsp">Manage</a></li>
                         </ul>
                     </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Medicine</span></a>
+                        <ul aria-expanded="false">
+                           <li><a href="./medicine-add.jsp">Add</a></li>
+                            <li><a href="Medicine?action=all">View</a></li>
+                            <li><a href="./medicine-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
-
-
         </div>
         <!--**********************************
             Sidebar end
@@ -154,7 +168,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">All branch</h4>
+                                <h4 class="card-title">All ward</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -167,7 +181,7 @@
 												<th>Action</th>
 											</tr>
 						               </thead>
-											<tbody>
+											<tbody style="color: black;">
 												<tag:forEach var="ward" items="${wardList}">
 													<tr>
 														<td>${ward.wardId}</td>

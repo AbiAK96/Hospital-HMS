@@ -71,6 +71,16 @@ public class Medicine {
 	public void setQty(int qty) {
 		this.qty = qty;
 	}
+
+	public Medicine(String medicineName, String medicineDescription, String manufacturingDate, String expiryDate,
+			int qty) {
+		
+		this.medicineName = medicineName;
+		this.medicineDescription = medicineDescription;
+		this.manufacturingDate = manufacturingDate;
+		this.expiryDate = expiryDate;
+		this.qty = qty;
+	}
 	
 	
 }

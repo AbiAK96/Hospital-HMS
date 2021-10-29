@@ -87,8 +87,8 @@
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Employee</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./employee-add.jsp">Add</a></li>
-                            <li><a href="./employee-all.jsp">View</a></li>
+                            <li><a href="Employee?action=add">Add</a></li>
+                            <li><a href="Employee?action=all">View</a></li>
                             <li><a href="./employee-manage.jsp">Manage</a></li>
 
                         </ul>
@@ -109,11 +109,11 @@
 
                         </ul>
                     </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Discharge</span></a>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Transfer</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./discharge-add.jsp">Add</a></li>
-                            <li><a href="./discharge-all.jsp">View</a></li>
-                            <li><a href="./discharge-manage.jsp">Manage</a></li>
+                            <li><a href="Transfer?action=add">Add</a></li>
+                            <li><a href="Transfer?action=all">View</a></li>
+                            <li><a href="./transfer-manage.jsp">Manage</a></li>
 
                         </ul>
                     </li>
@@ -132,13 +132,6 @@
                             <li><a href="./user-manage.jsp">Manage</a></li>
                         </ul>
                     </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">User</span></a>
-                        <ul aria-expanded="false">
-                           <li><a href="User?action=add">Add</a></li>
-                            <li><a href="User?action=all">View</a></li>
-                            <li><a href="./user-manage.jsp">Manage</a></li>
-                        </ul>
-                    </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Ward</span></a>
                         <ul aria-expanded="false">
                            <li><a href="Ward?action=add">Add</a></li>
@@ -146,10 +139,15 @@
                             <li><a href="./ward-manage.jsp">Manage</a></li>
                         </ul>
                     </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-app-store"></i><span class="nav-text">Medicine</span></a>
+                        <ul aria-expanded="false">
+                           <li><a href="./medicine-add.jsp">Add</a></li>
+                            <li><a href="Medicine?action=all">View</a></li>
+                            <li><a href="./medicine-manage.jsp">Manage</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
-
-
         </div>
         <!--**********************************
             Sidebar end
@@ -175,7 +173,7 @@
                                             <input type ="hidden" name="action" value="add"/>
                                                 <label for="patientName">Select the Patient:</label>
 													<br>
-														<select id=patientName name="patientName" class="btn btn-info dropdown-toggle" required>
+														<select id=patientName name="patientName" class="btn btn-success dropdown-toggle" required>
 														<tag:forEach items="${patientList}" var="patient">
 														<option value="${patient.patientName}">${patient.patientName}</option>
 														</tag:forEach>
@@ -184,7 +182,7 @@
                                             <div class="form-group col-md-4">
 													<label for="branchId">Select the Branch ID:</label>
 													<br>
-														<select id="branchId" name="branchId" class="btn btn-info dropdown-toggle" required>
+														<select id="branchId" name="branchId" class="btn btn-success dropdown-toggle" required>
 														<tag:forEach items="${branchList}" var="branch">
 														<option value="${branch.branchId}">${branch.branchName}</option>
 														</tag:forEach>
@@ -192,12 +190,12 @@
                                             </div>
                                             <div class="form-group col-md-6">
 										<label>Pick-Date</label> <input name="transferDate"
-											class="datepicker-default form-control" value="Select date"
-											id="date">
+											class="datepicker-default form-control" value="Select date" 
+											id="date" required>
 									</div>
                                         </div>
 
-                                        <button type="submit" class="btn btn-primary">Add Transfer details</button>
+                                        <button type="submit" class="btn btn-success">Add Transfer details</button>
                                     </form>
                                 </div>
                             </div>
